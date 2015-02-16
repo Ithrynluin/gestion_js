@@ -1,16 +1,18 @@
 <h1>Accueillir Joueur</h1>
 <?php
 if(empty($_POST["pseudo"]) || empty($_POST["zone"])){  ?>
-	<form method="post" action="accueillir_joueur.php">
+	<script src='js/accueillir_joueur_1.js'></script>
+	<form method="post" action="index.php?page=3">
 		<p>
 			<label for="pseudo">Pseudo : </label>
 			<input type="text" id="pseudo" name="pseudo"/>
 		</p>
+		<p id="credits"> Credits : <span></span></p>
 		<p>
 			<label for="zone">Zone : </label>
 			<select id="zone" name="zone">
 				<option value="1">Gamers</option>
-				<option value="2">Mélomane</option>
+				<option value="2">Mélomanes</option>
 			</select>
 		</p>
 		<p>
@@ -27,7 +29,7 @@ if(empty($_POST["pseudo"]) || empty($_POST["zone"])){  ?>
 			Machine :
 		</p>
 		<p>
-			<a href="accueillir_joueur.php">Accueillir un nouveau joueur</a>
+			<a href="index.php?page=3">Accueillir un nouveau joueur</a>
 		</p>
 	</div>
 <?php
