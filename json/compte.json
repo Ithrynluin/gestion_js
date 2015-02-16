@@ -1,0 +1,18 @@
+{
+    "idCompte": 1,
+    "nbCredit": 95,
+    "mail": "test@gmail.com",
+    "login": "test",
+    "password": "lapin",
+    "nom": "person",
+    "prenom": "test"  
+},
+{
+    "idCompte": 2,
+    "nbCredit": 120,
+    "mail": "paul@gmail.com",
+    "login": "paul",
+    "password": "lapin",
+    "nom": "test",
+    "prenom": "paul"  
+}
