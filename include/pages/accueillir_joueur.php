@@ -1,6 +1,6 @@
 <h1>Accueillir Joueur</h1>
 <?php
-if(empty($POST["pseudo"]) || empty($POST["zone"])){  ?>
+if(empty($_POST["pseudo"]) || empty($_POST["zone"])){  ?>
 	<form method="post" action="accueillir_joueur.php">
 		<p>
 			<label for="pseudo">Pseudo : </label>
@@ -9,6 +9,8 @@ if(empty($POST["pseudo"]) || empty($POST["zone"])){  ?>
 		<p>
 			<label for="zone">Zone : </label>
 			<select id="zone" name="zone">
+				<option value="1">Gamers</option>
+				<option value="2">Mélomane</option>
 			</select>
 		</p>
 		<p>
@@ -19,7 +21,7 @@ if(empty($POST["pseudo"]) || empty($POST["zone"])){  ?>
 }else{ ?>
 	<div id="confirmation">
 		<p>
-			Zone : 
+			Zone : <?php echo $_POST["zone"];?>
 		</p>
 		<p>
 			Machine :
