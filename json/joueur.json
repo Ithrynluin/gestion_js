@@ -1,0 +1,15 @@
+{
+    "idJoueur": 1,
+    "idCompte": 1,
+    "pseudo": "test",  
+},
+{
+    "idJoueur": 2,
+    "idCompte": 1,
+    "pseudo": "testou", 
+},
+{
+    "idJoueur": 3,
+    "idCompte": 2,
+    "pseudo": "popaul", 
+}

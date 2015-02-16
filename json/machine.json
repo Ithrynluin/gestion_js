@@ -1,0 +1,30 @@
+{
+	"idMachine": 1,
+	"idEtat": 2,
+	"idZone": 1,
+	"nbUtilisation": 12
+},
+{
+	"idMachine": 2,
+	"idEtat": 1,
+	"idZone": 1,
+	"nbUtilisation": 25
+},
+{
+	"idMachine": 3,
+	"idEtat": 1,
+	"idZone": 1,
+	"nbUtilisation": 14
+},
+{
+	"idMachine": 4,
+	"idEtat": 2,
+	"idZone": 2,
+	"nbUtilisation": 30
+},
+{
+	"idMachine": 5,
+	"idEtat": 3,
+	"idZone": 2,
+	"nbUtilisation": 51
+}
