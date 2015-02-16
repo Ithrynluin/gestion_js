@@ -1,4 +1,4 @@
-{
+[{
     "idCompte": 1,
     "nbCredit": 95,
     "mail": "test@gmail.com",
@@ -15,4 +15,4 @@
     "password": "lapin",
     "nom": "test",
     "prenom": "paul"  
-}
+}]
