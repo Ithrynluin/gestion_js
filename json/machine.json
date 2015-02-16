@@ -1,4 +1,4 @@
-{
+[{
 	"idMachine": 1,
 	"idEtat": 2,
 	"idZone": 1,
@@ -153,4 +153,4 @@
 	"idEtat": 1,
 	"idZone": 3,
 	"nbUtilisation": 354
-}
+}]

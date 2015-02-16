@@ -1,4 +1,4 @@
-{
+[{
     "idJoueur": 1,
     "idCompte": 1,
     "pseudo": "test",  
@@ -12,4 +12,4 @@
     "idJoueur": 3,
     "idCompte": 2,
     "pseudo": "popaul", 
-}
+}]
