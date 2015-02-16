@@ -1,18 +1,18 @@
 {
     "idCompte": 1,
-    "nbCredit": 15,
+    "nbCredit": 95,
     "mail": "test@gmail.com",
     "login": "test",
-    "mdp": "lapin",
+    "password": "lapin",
     "nom": "person",
     "prenom": "test"  
 },
 {
     "idCompte": 2,
-    "nbCredit": 20,
+    "nbCredit": 120,
     "mail": "paul@gmail.com",
     "login": "paul",
-    "mdp": "lapin",
+    "password": "lapin",
     "nom": "test",
     "prenom": "paul"  
 }
