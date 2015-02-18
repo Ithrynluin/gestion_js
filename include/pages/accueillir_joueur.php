@@ -11,8 +11,6 @@ if(empty($_POST["pseudo"]) || empty($_POST["zone"])){  ?>
 		<p>
 			<label for="zone">Zone : </label>
 			<select id="zone" name="zone">
-				<option value="1">Gamers</option>
-				<option value="2">Mélomanes</option>
 			</select>
 		</p>
 		<p>

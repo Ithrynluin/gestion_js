@@ -3,6 +3,18 @@ $(document).ready(function() {
 	$("#credits").css("display", "none");
 	$("#valider").attr({"disabled":"disabled"});
 
+	$.ajax({
+		url: 'php/get_zone_libre.php',
+		type: 'GET',
+		dataType: 'json',
+	})
+	.done(function(data) {
+		for (zone in data){
+			$("#zone").append('<option value='+data[zone]["idZone"]+">"+data[zone]["nomZone"]+"</option>");
+		}
+	});
+	
+
 	$("#pseudo").on("change",function(){
 		var pseudo = this.value;
 		$.ajax({

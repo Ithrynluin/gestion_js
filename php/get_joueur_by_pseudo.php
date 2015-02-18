@@ -9,7 +9,7 @@
 		}
 	}
 	if(empty($joueur)){
-		echo "Va te faire";
+		
 	}
 	echo json_encode($joueur);
 ?>
