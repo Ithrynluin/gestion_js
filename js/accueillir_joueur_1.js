@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 	$("#credits").css("display", "none");
+	$("#valider").attr({"disabled":"disabled"});
 
 	$("#pseudo").on("change",function(){
 		var pseudo = this.value;
@@ -19,9 +20,11 @@ $(document).ready(function() {
 			}
 			if(credit != -1){
 				$("#credits").css("display", "block");
+				$("#valider").removeAttr("disabled");
 				$("#credits span").text(credit);
 			}else{
 				$("#credits").css("display", "none");
+				$("#valider").attr({"disabled":"disabled"});
 			}
 		});
 	});

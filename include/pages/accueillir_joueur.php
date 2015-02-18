@@ -16,7 +16,7 @@ if(empty($_POST["pseudo"]) || empty($_POST["zone"])){  ?>
 			</select>
 		</p>
 		<p>
-			<input type="submit" valeu="Valider">
+			<input type="submit" id="valider" value="Valider">
 		</p>
 	</form>	
 <?php
