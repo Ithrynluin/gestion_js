@@ -16,19 +16,17 @@ $(document).ready(function() {
 			}
 			if(idCompte != -1){
 				$.ajax({
-					url: 'json/compte.json',
+					url: 'php/get_compte_by_id.php',
 					type: 'GET',
 					dataType: 'json',
 					cache: false,
-					async: true
+					async: true,
+					data: "idCompte="+idCompte
 				})
 				.done(function(data) {
-					console.log("done credit");
 					var credit = -1
-					for(c in data){
-						if(data[c]["idCompte"] == idCompte){
-							credit = data[c]["nbCredit"]
-						}
+					if(data != {}){
+						credit = data["nbCredit"];
 					}
 					if(credit != -1){
 						console.log(credit)
