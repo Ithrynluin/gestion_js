@@ -2,19 +2,17 @@ $(document).ready(function() {
 	$("#pseudo").on("change",function(){
 		pseudo = this.value;
 		$.ajax({
-			url: 'json/joueur.json',
+			url: 'php/get_joueur_by_pseudo.php',
 			type: 'GET',
 			dataType: 'json',
 			cache: false,
-			async: true
+			async: true,
+			data: "pseudo="+pseudo
 		})
 		.done(function(data) {
 			idCompte = -1
-			for (j in data){
-				if(data[j]["pseudo"] == pseudo){
-					idCompte = data[j]["idCompte"];
-				}
-				console.log(data[j]["pseudo"]);
+			if(data != {}){
+				idCompte = data["idCompte"]
 			}
 			if(idCompte != -1){
 				$.ajax({
@@ -37,7 +35,7 @@ $(document).ready(function() {
 						$("#credits span").text(credit);
 					}
 				});
-			} 
+			}
 		});
 	});
 });
