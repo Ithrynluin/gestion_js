@@ -1,0 +1,13 @@
+.table{
+	border: black solid 1px;
+	width: 150px;
+	height: 100px;
+	margin-top: 50px;
+}
+
+.machine{
+	border: black solid 1px;
+	width: 100px;
+	height: 100px;
+	margin-left: 50px;
+}
