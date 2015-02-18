@@ -25,7 +25,7 @@ $(document).ready(function() {
 				if (cmpt % 5 == 0) {
 					node = document.createElement("div"); 
 					node.className = 'table';             
-					node.innerHTML = 'table 1';   
+					node.innerHTML = 'table';   
 					$("select#liste").parent().append(node);
 				};
 				node = document.createElement("span"); 
