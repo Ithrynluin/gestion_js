@@ -15,6 +15,9 @@ switch ($page) {
 	case 3:
 		include_once('pages/accueillir_joueur.php');
 		break;
+	case 4:
+		include_once('pages/ajouterCompte.php');
+		break;
 	default : 	include_once('pages/accueil.inc.php');
 }
 	

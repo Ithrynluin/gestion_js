@@ -24,6 +24,9 @@
 					<li>
 						<a href="index.php?page=3">Nouveau joueur</a>
 					</li>
+					<li>
+						<a href="index.php?page=4">Nouveau Compte</a>
+					</li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
