@@ -11,6 +11,9 @@
 		<link href='css/style.css' rel='stylesheet'/>
 
 		<script src='js/jquery.min.js'></script>
+		<script src='js/moment.min.js'></script>
+		<script src='js/fullcalendar.min.js'></script>
+		<script src='js/fullcalendar.fr.js'></script>
 
 		<title>Gérance - Client riche</title>
 	</head>
