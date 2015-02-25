@@ -28,6 +28,7 @@ class Event {
 
 		$this->title = $array['title'];
 
+
 		if (isset($array['allDay'])) {
 			// allDay has been explicitly specified
 			$this->allDay = (bool)$array['allDay'];
@@ -49,7 +50,8 @@ class Event {
 
 		// Record misc properties
 		foreach ($array as $name => $value) {
-			if (!in_array($name, array('title', 'allDay', 'start', 'end'))) {
+			if (!in_array($name, array('title', 'allDay', 'start', 'end', 'id', '_id'))) {
+				var_dump("Patate".$name);
 				$this->properties[$name] = $value;
 			}
 		}
