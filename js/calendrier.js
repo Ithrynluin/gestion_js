@@ -81,7 +81,7 @@ $(document).ready(function() {
 
 			if (title) {
 				$('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
-				//$('#calendar').fullCalendar('unselect');
+				$('#calendar').fullCalendar('unselect');
 				updateData();
 			}
 		}
