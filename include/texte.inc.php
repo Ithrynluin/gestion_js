@@ -18,6 +18,12 @@ switch ($page) {
 	case 4:
 		include_once('pages/ajouterCompte.php');
 		break;
+	case 5:
+		include_once('pages/crediter.php');
+		break;
+	case 6:
+		include_once('pages/debiter.php');
+		break;
 	default : 	include_once('pages/accueil.inc.php');
 }
 	

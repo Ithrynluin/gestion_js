@@ -15,10 +15,10 @@ foreach ($data as $cle=>$event) {
 	}
 	$compteur ++;
 }
-var_dump($data);
 
 $jsonArray = json_encode($data);
+//var_dump(dirname(__FILE__) . '/../json/events.json');
 
 // Stockage des données dans un fichier
-file_put_contents(dirname(__FILE__) . '/../json/events.json', $jsonArray);
+var_dump(file_put_contents(dirname(__FILE__) . '/../json/events.json', $jsonArray));
 
