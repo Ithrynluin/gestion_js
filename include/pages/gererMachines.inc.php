@@ -1,5 +1,5 @@
 <h1>Machines</h1>
-<h2>Rendre une machine indisponible</h2>
+<h2>Gérer les machines (rendre indisponible et rendre libre)</h2>
 <link href='css/machine.css' rel='stylesheet' />
 <select id='liste'>
 	<option value='0'>Zone</option>
