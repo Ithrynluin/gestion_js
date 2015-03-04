@@ -6,15 +6,20 @@ if(isset($_POST['login']) && isset($_POST['montant'])){
 	foreach ($data as $key => $value) {
 		if($value->login == $_POST['login']){
 			$id = $key;
+			$pseudo = $value->login;
 		}
 	}
-	
-	$credits = $data[$id]->nbCredit;
-	$ajout = intval($_POST['montant']);
-	$data[$id]->nbCredit = $credits + $ajout;
+	if($pseudo == null){
+		echo 'Ce pseudo n\'existe pas';
+	}
+	else{
+		$credits = $data[$id]->nbCredit;
+		$ajout = intval($_POST['montant']);
+		$data[$id]->nbCredit = $credits + $ajout;
 
-	$newJsonString = json_encode($data);
-	file_put_contents(dirname(__FILE__) . '/../../json/compte.json', $newJsonString);
+		$newJsonString = json_encode($data);
+		file_put_contents(dirname(__FILE__) . '/../../json/compte.json', $newJsonString);
+	}
 }
 else{
 ?>

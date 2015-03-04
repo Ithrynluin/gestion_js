@@ -5,8 +5,8 @@
 	"mail":"test@gmail.com",
 	"login":"test",
 	"password":"lapin",
-	"nom":"person",
-	"prenom":"test"
+	"nom":"person","
+	prenom":"test"
 	},
 {
 	"idCompte":2,
