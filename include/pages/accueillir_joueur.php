@@ -1,6 +1,9 @@
+<?php
+	require_once(dirname(__FILE__) ."/../../php/set_machine_occupe.php");
+?>
 <h1>Accueillir Joueur</h1>
 <?php
-if(empty($_POST["pseudo"]) || empty($_POST["zone"])){  ?>
+if(empty($_POST["pseudo"]) || empty($_POST["zone"]) || empty($_POST['machine'])){  ?>
 	<script src='js/accueillir_joueur_1.js'></script>
 	<form method="post" action="index.php?page=3">
 		<p>
@@ -13,23 +16,30 @@ if(empty($_POST["pseudo"]) || empty($_POST["zone"])){  ?>
 			<select id="zone" name="zone">
 			</select>
 		</p>
+
+		<p>
+			<label for="machine">Machine : </label>
+			<input type="text" id="machine" name="machine" readonly="readonly"/>
 		<p>
 			<input type="submit" id="valider" value="Valider">
 		</p>
-	</form>	
+	</div>
 <?php
 }else{ ?>
-	<div id="confirmation">
+<?php
+	if($_POST['machine'] != "-1"){ 
+		set_machine_occupe($_POST['machine']); ?>
 		<p>
-			Zone : <?php echo $_POST["zone"];?>
+			Opération réussie : La machine <?php echo $_POST['machine']?> est attibué au joueur <?php echo $_POST['pseudo']?>
 		</p>
-		<p>
-			Machine :
-		</p>
-		<p>
-			<a href="index.php?page=3">Accueillir un nouveau joueur</a>
-		</p>
-	</div>
+<?php
+	}else{ ?>
+		<p>Erreur une machine n'a pas pu etre attribué.</p>
+<?php
+	}?>
+	<p>
+		<a href="index.php?page=3">Accueillir un nouveau joueur</a>
+	</p>
 <?php
 }
 ?>

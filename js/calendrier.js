@@ -50,6 +50,7 @@ $(document).ready(function() {
 			url:"json/events.json"
 		},
 		eventClick: function(calEvent, jsEvent, view) {
+			$("#titre").removeClass("form-control");
 			if(!eventModifie){
 				eventModifie = calEvent;
 				$(this).replaceWith($('#modif'));
