@@ -31,17 +31,35 @@ $(document).ready(function() {
 					numtable ++;
 				};
 				if(machines[machine]["idEtat"] == 3)
-					$(".table:last-child").append("<span id='machine' class='machineHs'>"+machines[machine]["idMachine"]+"</span>");
+					$(".table:last-child").append("<span class='machineHs'>"+machines[machine]["idMachine"]+"</span>");
 				else
 					if (machines[machine]["idEtat"] == 2)
-						$(".table:last-child").append("<span id='machine' class='machineOccupee'>"+machines[machine]["idMachine"]+"</span>");
+						$(".table:last-child").append("<span class='machineOccupee'>"+machines[machine]["idMachine"]+"</span>");
 					else
-						$(".table:last-child").append("<span id='machine' class='machineLibre'>"+machines[machine]["idMachine"]+"</span>");
+						$(".table:last-child").append("<span class='machineLibre'>"+machines[machine]["idMachine"]+"</span>");
 				cmpt++;
 			}
+			$('.machineLibre').click(function(){
+				this.className = 'machineHs';
+				var res = {};
+				res.idMachine = $(this).html();
+				res.idEtat = 3 ;
+				console.log(res);
+
+				$.ajax({
+					data:JSON.stringify(res),
+					type:'POST',
+					url:'php/updateMachine.php',
+					success:function(data){
+						// Affichage si tout se passe bien
+						console.log("Update ok");
+					},
+					error:function(data){
+						console.log("Erreur update");
+					}
+				});
+			});
 		});
 	});
+
 });
-$("#machine").click(function(){
-		console.log(this);
-	});

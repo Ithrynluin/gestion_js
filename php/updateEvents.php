@@ -22,3 +22,4 @@ $jsonArray = json_encode($data);
 // Stockage des données dans un fichier
 var_dump(file_put_contents(dirname(__FILE__) . '/../json/events.json', $jsonArray));
 
+?>
