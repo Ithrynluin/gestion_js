@@ -59,6 +59,26 @@ $(document).ready(function() {
 					}
 				});
 			});
+			$('.machineHs').click(function(){
+				this.className = 'machineLibre';
+				var res = {};
+				res.idMachine = $(this).html();
+				res.idEtat = 1 ;
+				console.log(res);
+
+				$.ajax({
+					data:JSON.stringify(res),
+					type:'POST',
+					url:'php/updateMachine.php',
+					success:function(data){
+						// Affichage si tout se passe bien
+						console.log("Update ok");
+					},
+					error:function(data){
+						console.log("Erreur update");
+					}
+				});
+			});
 		});
 	});
 
