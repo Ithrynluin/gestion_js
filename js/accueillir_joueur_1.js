@@ -59,7 +59,10 @@ $(document).ready(function() {
 		}
 		//Si aucune zone libre.
 		if(!ok){
-			$("#machine span").text("Aucune machine disponible");
+			$("#machine").after("<span class='text-danger'>Aucune machine disponible</span>");
+			$("#machine").remove();
+			$("#zone").after("<span class='text-danger'>Aucune zone disponible</span>");
+			$("#zone").remove();
 		}
 	});
 

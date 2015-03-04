@@ -10,7 +10,7 @@
 	foreach ($zone_array as $zone) {
 		$compte = 0;
 		foreach ($machine_array as $machine) {
-			if($machine["idZone"] == $machine["idZone"]){
+			if($machine["idZone"] == $zone["idZone"]){
 				if($machine["idEtat"] == 1){
 					$compte = $compte + 1;
 				}
