@@ -8,18 +8,23 @@ if(isset($_POST['login']) && isset($_POST['montant'])){
 			$id = $key;
 		}
 	}
-	
-	$credits = $data[$id]->nbCredit;
-	$sup = intval($_POST['montant']);
-	
-	if($credits > $sup){
-		$data[$id]->nbCredit = $credits - $sup;
-		$newJsonString = json_encode($data);
-		file_put_contents(dirname(__FILE__) . '/../../json/compte.json', $newJsonString);
+	if($pseudo == null){
+		echo 'Ce pseudo n\'existe pas';
 	}
 	else{
-		echo 'Vous n\'avez pas assez de crédits.';
+		$credits = $data[$id]->nbCredit;
+		$sup = intval($_POST['montant']);
+		
+		if($credits > $sup){
+			$data[$id]->nbCredit = $credits - $sup;
+			$newJsonString = json_encode($data);
+			file_put_contents(dirname(__FILE__) . '/../../json/compte.json', $newJsonString);
+		}
+		else{
+			echo 'Vous n\'avez pas assez de crédits.';
+		}
 	}
+	
 	
 }
 else{
