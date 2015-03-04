@@ -1,12 +1,7 @@
 <?php
-	$json = file_get_contents(dirname(__FILE__) . '/../json/joueur.json');
-	$input_arrays = json_decode($json, true);
-	$joueur = 0;
-	foreach ($input_arrays as $key => $value) {
-		if($value["pseudo"] == $_GET["pseudo"]){
-			$joueur = $value;
-		}
-	}
+	require dirname(__FILE__).'/util.php';
+
+	$joueur = get_id_joueur_by_pseudo($_GET['pseudo']);
 	
 
 	if($joueur != 0){
