@@ -1,5 +1,6 @@
 <?php
 	require_once(dirname(__FILE__) ."/../../php/set_machine_occupe.php");
+	require_once(dirname(__FILE__) ."/../../php/set_joueur_by_pseudo_utilise_machine.php");
 ?>
 <h1>Accueillir Joueur</h1>
 <?php
@@ -28,11 +29,17 @@ if(empty($_POST["pseudo"]) || empty($_POST["zone"]) || empty($_POST['machine']))
 }else{ ?>
 <?php
 	if($_POST['machine'] != "-1"){ 
-		set_machine_occupe($_POST['machine']); ?>
-		<p>
-			Opération réussie : La machine <?php echo $_POST['machine']?> est attibué au joueur <?php echo $_POST['pseudo']?>
-		</p>
+		$rt = set_joueur_by_pseudo_utilise_machine($_POST['pseudo'], $_POST['machine']);
+		echo $rt;
+		if($rt == 1){
+			set_machine_occupe($_POST['machine']); ?>
+			<p>
+				Opération réussie : La machine <?php echo $_POST['machine']?> est attibué au joueur <?php echo $_POST['pseudo']?>
+			</p>
 <?php
+		}else{ ?>
+			<p>Erreur une machine n'a pas pu etre attribué.</p>
+<?php   }
 	}else{ ?>
 		<p>Erreur une machine n'a pas pu etre attribué.</p>
 <?php

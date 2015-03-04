@@ -7,7 +7,13 @@
 	<option value='2'>Mélomanes</option>
 	<option value='3'>Barrés</option>
 </select>
-<script src='js/lister_machine.js'></script>
+<br>
+<ul>
+	<li class='machineHs'> </li> Machines HS
+	<li class='machineLibre'> </li> Machines Libres
+	<li class='machineOccupee'> </li> Machines Occupées
+</ul>
+<script src='js/machine.js'></script>
 <div id='salle'>
 
 </div>
