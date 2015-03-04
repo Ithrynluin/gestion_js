@@ -5,9 +5,27 @@
 	margin-top: 50px;
 }
 
-.machine{
+.machineLibre{
 	border: black solid 1px;
-	width: 100px;
-	height: 100px;
+	width: 20px;
+	height: 20px;
 	margin-left: 50px;
+	display: inline-block;
+	background-color: green;
+}
+
+.machineOccupee{
+	border: black solid 1px;
+	width: 20px;
+	height: 20px;
+	margin-left: 50px;
+	display: inline-block;
+}
+.machineHs{
+	border: black solid 1px;
+	width: 20px;
+	height: 20px;
+	margin-left: 50px;
+	display: inline-block;
+	background-color: red;
 }

@@ -8,19 +8,6 @@
 	<option value='3'>Barrés</option>
 </select>
 <script src='js/lister_machine.js'></script>
-<!-- <div class='table'>
-	table 1 :
-	<span class='machine'></span>
-	<span class='machine'></span>
-	<span class='machine'></span>
-	<span class='machine'></span>
-	<span class='machine'></span>
+<div id='salle'>
+
 </div>
-<div class='table'>
-	table 2 :
-	<span class='machine'></span>
-	<span class='machine'></span>
-	<span class='machine'></span>
-	<span class='machine'></span>
-	<span class='machine'></span>
-</div> -->
