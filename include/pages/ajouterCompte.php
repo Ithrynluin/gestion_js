@@ -9,19 +9,21 @@
 				<input id="nom" name="nom" type="text">
 				<br>
 				<label>Prénom</label>
-				<input name="prenom" type="text">
+				<input id="prenom" name="prenom" type="text">
 				<br>
 				<label>Login</label>
-				<input name="login" type="text">
+				<input id="login" name="login" type="text">
+				<br>
+				<p id="logPris" class="text-danger"></p>
 				<br>
 				<label>E-Mail</label>
-				<input name="mail" type="email">
+				<input id="mail" name="mail" type="email">
 				<br>
 				<label>Nombre de crédits</label>
 				<input name="credit" type="text">
 				<br>
 				<label>Mot de Passe</label>
-				<input name="mdp" type="password">
+				<input id="mdp" name="mdp" type="password">
 				<br>
 				<input type="submit" id="valider" value="Ajouter">
 			</form>	
@@ -45,6 +47,7 @@
 
 		$newJsonString = json_encode($data);
 		file_put_contents('./json/compte.json', $newJsonString);
+
 		echo 'Le compte de ';
 		echo $_POST['prenom'];
 		echo ' ';
