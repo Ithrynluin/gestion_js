@@ -9,9 +9,9 @@
 </select>
 <br>
 <ul>
-	<li style='border: black solid 1px; width: 20px; height: 20px; margin-left: 50px; display: inline-block; background-color: red;'> </li> Machines HS
-	<li style='border: black solid 1px;	width: 20px; height: 20px; margin-left: 50px; display: inline-block; background-color: green;'> </li> Machines Libres
-	<li class='machineOccupee'> </li> Machines Occupées
+	<li style='border: black solid 1px; width: 20px; height: 20px; margin-left: 50px; display: inline-block; background-color: red; border-radius: 100px;'> </li> Machines HS
+	<li style='border: black solid 1px;	width: 20px; height: 20px; margin-left: 50px; display: inline-block; background-color: green; border-radius: 100px;'> </li> Machines Libres
+	<li style='border: black solid 1px;	width: 20px; height: 20px; margin-left: 50px; display: inline-block; border-radius: 100px;'> </li> Machines Occupées
 </ul>
 <script src='js/machine.js'></script>
 <div id='salle'>

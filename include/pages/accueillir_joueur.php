@@ -30,7 +30,6 @@ if(empty($_POST["pseudo"]) || empty($_POST["zone"]) || empty($_POST['machine']))
 <?php
 	if($_POST['machine'] != "-1"){ 
 		$rt = set_joueur_by_pseudo_utilise_machine($_POST['pseudo'], $_POST['machine']);
-		echo $rt;
 		if($rt == 1){
 			set_machine_occupe($_POST['machine']); ?>
 			<p>
