@@ -1,31 +1,45 @@
+#salle{
+	font-weight: bold;
+	font-size: 120%;
+}
+
 .table{
 	border: black solid 1px;
-	width: 150px;
-	height: 100px;
+	width: 120px;
+	height: 80px;
 	margin-top: 50px;
+	margin-left: 20px;
+	display: inline-block;
+	border-radius: 20px;
 }
 
 .machineLibre{
 	border: black solid 1px;
 	width: 20px;
 	height: 20px;
-	margin-left: 50px;
+	margin-left: 20px;
+	margin-right: 10px;
 	display: inline-block;
 	background-color: green;
+	border-radius: 100px;
 }
 
 .machineOccupee{
 	border: black solid 1px;
 	width: 20px;
 	height: 20px;
-	margin-left: 50px;
+	margin-left: 20px;
+	margin-right: 10px;
 	display: inline-block;
+	border-radius: 100px;
 }
 .machineHs{
 	border: black solid 1px;
 	width: 20px;
 	height: 20px;
-	margin-left: 50px;
+	margin-left: 20px;
+	margin-right: 10px;
 	display: inline-block;
 	background-color: red;
+	border-radius: 100px;
 }

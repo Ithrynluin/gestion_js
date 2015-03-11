@@ -1,6 +1,28 @@
 $(document).ready(function() {
-	$("#liste").on("change",function(){
+	function chiffreA(id){
+		obj = {idZone:id};
+		$.ajax({
+			data:obj,
+			type:'GET',
+			url:'php/getChiffreAffaires.php',
+			success:function(data){
+				// Affichage si tout se passe bien
+				//console.log(data);
+				if(id != 0){
+					node = document.createElement("p");           
+					node.innerHTML = 'chiffre d\'affaire : '+data+' euros';
+					$("#salle").append(node);
+				}
+			},
+			error:function(data){
+				console.log("Erreur update");
+			}
+		});
+	}
+
+	function update(){
 		var zone = $("select#liste").val();
+		$("#salle p").remove();
 		$( "span" ).remove();
 		$(".table").remove();
 		$.ajax({
@@ -26,7 +48,7 @@ $(document).ready(function() {
 				if (cmpt % 5 == 0) {
 					node = document.createElement("div"); 
 					node.className = 'table';             
-					node.innerHTML = 'table';
+					//node.innerHTML = 'table';
 					$("#salle").append(node);
 					numtable ++;
 				};
@@ -79,7 +101,16 @@ $(document).ready(function() {
 					}
 				});
 			});
+				chiffreA(zone);
 		});
-	});
+	}
 
+	$("#liste").on("change", update());
+
+	function boucle(){
+		update();
+		setTimeout(boucle,5000);
+	}
+
+	boucle();
 });
