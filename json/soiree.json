@@ -1,0 +1,18 @@
+[{
+	"idSoiree": 1,
+	"date": "16-02-2015",
+	"theme": "noire et blanc",
+	"idGagnant": 1
+},
+{
+	"idSoiree": 2,
+	"date": "16-03-2015",
+	"theme": "pokémon",
+	"idGagnant": 1
+},
+{
+	"idSoiree": 3,
+	"date": "16-04-2015",
+	"theme": "bière",
+	"idGagnant": 2
+}]
