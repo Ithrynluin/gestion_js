@@ -1,12 +1,15 @@
 [{
 	"idZone": 1,
-	"nomZone": "Gamers"
+	"nomZone": "Gamers",
+	"chiffreAffaire": 1200
 },
 {
 	"idZone": 2,
-	"nomZone": "Mélomanes"
+	"nomZone": "Mélomanes",
+	"chiffreAffaire": 560
 },
 {
 	"idZone": 3,
-	"nomZone": "Barrés"
+	"nomZone": "Barrés",
+	"chiffreAffaire": 2400
 }]
