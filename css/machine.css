@@ -5,8 +5,8 @@
 
 .table{
 	border: black solid 1px;
-	width: 120px;
-	height: 80px;
+	width: 140px;
+	height: 140px;
 	margin-top: 50px;
 	margin-left: 20px;
 	display: inline-block;
@@ -15,31 +15,39 @@
 
 .machineLibre{
 	border: black solid 1px;
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 	margin-left: 20px;
 	margin-right: 10px;
+	margin-top: 10px;
 	display: inline-block;
 	background-color: green;
 	border-radius: 100px;
+	text-align: center;
+	color: white;
 }
 
 .machineOccupee{
 	border: black solid 1px;
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 	margin-left: 20px;
 	margin-right: 10px;
+	margin-top: 10px;
 	display: inline-block;
 	border-radius: 100px;
+	text-align: center;
 }
 .machineHs{
 	border: black solid 1px;
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 	margin-left: 20px;
 	margin-right: 10px;
+	margin-top: 10px;
 	display: inline-block;
 	background-color: red;
 	border-radius: 100px;
+	text-align: center;
+	color: white;
 }

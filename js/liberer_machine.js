@@ -26,7 +26,6 @@ $(document).ready(function() {
 				if (cmpt % 5 == 0) {
 					node = document.createElement("div"); 
 					node.className = 'table';             
-					node.innerHTML = 'table';
 					$("#salle").append(node);
 					numtable ++;
 				}
