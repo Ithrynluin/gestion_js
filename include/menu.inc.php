@@ -25,6 +25,9 @@
 					<a href="index.php?page=3">Nouveau joueur</a>
 				</li>
 				<li>
+					<a href="index.php?page=7">Libérer une machine</a>
+				</li>
+				<li>
 					<a href="index.php?page=4">Nouveau Compte</a>
 				</li>
 			</ul>
