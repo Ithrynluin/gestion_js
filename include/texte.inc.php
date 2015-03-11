@@ -24,6 +24,9 @@ switch ($page) {
 	case 6:
 		include_once('pages/debiter.php');
 		break;
+	case 7:
+		include_once('pages/liberer_machine.php');
+		break;
 	default : 	include_once('pages/accueil.inc.php');
 }
 	

@@ -1,5 +1,5 @@
 <h1>Machines</h1>
-<h2>Rendre une machine indisponible</h2>
+<h2>Gérer les machines (rendre indisponible et rendre libre)</h2>
 <link href='css/machine.css' rel='stylesheet' />
 <select id='liste'>
 	<option value='0'>Zone</option>
@@ -9,8 +9,8 @@
 </select>
 <br>
 <ul>
-	<li class='machineHs'> </li> Machines HS
-	<li class='machineLibre'> </li> Machines Libres
+	<li style='border: black solid 1px; width: 20px; height: 20px; margin-left: 50px; display: inline-block; background-color: red;'> </li> Machines HS
+	<li style='border: black solid 1px;	width: 20px; height: 20px; margin-left: 50px; display: inline-block; background-color: green;'> </li> Machines Libres
 	<li class='machineOccupee'> </li> Machines Occupées
 </ul>
 <script src='js/machine.js'></script>
