@@ -1,0 +1,12 @@
+[{
+	"idEtat": 1,
+	"nomEtat": "disponible"
+},
+{
+	"idEtat": 2,
+	"nomEtat": "occupé"
+},
+{
+	"idEtat": 3,
+	"nomEtat": "HS"
+}]

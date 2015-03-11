@@ -9,8 +9,8 @@
 </select>
 <br>
 <ul>
-	<li class='machineHs'> </li> Machines HS
-	<li class='machineLibre'> </li> Machines Libres
+	<li style='border: black solid 1px; width: 20px; height: 20px; margin-left: 50px; display: inline-block; background-color: red;'> </li> Machines HS
+	<li style='border: black solid 1px;	width: 20px; height: 20px; margin-left: 50px; display: inline-block; background-color: green;'> </li> Machines Libres
 	<li class='machineOccupee'> </li> Machines Occupées
 </ul>
 <script src='js/machine.js'></script>
