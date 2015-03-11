@@ -1,4 +1,5 @@
 *.json
+json/*
 json\chiffreAffaires.json
 json\comptes.json
 json\data.json
