@@ -1,4 +1,10 @@
 <?php
+	// Permet de savoir si un joueur utilise une machine
+	// Paramètres (GET) :
+	// 		- pseudo : pseudo du joueur
+	// Type de données attendu : JSON
+	// Type de données retourné : JSON (objet joueur) si
+	//		il utilise une machine, 0 sinon
 	require dirname(__FILE__).'/util.php';
 
 	$joueur = get_id_joueur_by_pseudo($_GET['pseudo']);
