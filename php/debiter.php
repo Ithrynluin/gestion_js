@@ -7,21 +7,27 @@
 	// Type de données attendu : JSON
 	// Type de données retourné : rien si tout se passe bien, un
 	// message d'erreur sinon
-	$jsonString = file_get_contents(dirname(__FILE__).'/../../json/compte.json');
+	$jsonString = file_get_contents(dirname(__FILE__).'/../json/compte.json');
 	$data = json_decode($jsonString);
 
 	foreach ($data as $key => $value) {
-		if($value->id == $_POST['id']){
+		if($value->idCompte == $_GET['id']){
 			$id = $key;
 		}
 	}
+
+	if(!isset($id)){
+		echo "Ce compte n'existe pas";
+		return;
+	}
+
 	$credits = $data[$id]->nbCredit;
 	$sup = intval($_GET['montant']);
 		
 	if($credits > $sup){
 		$data[$id]->nbCredit = $credits - $sup;
 		$newJsonString = json_encode($data);
-		file_put_contents(dirname(__FILE__) . '/../../json/compte.json', $newJsonString);
+		file_put_contents(dirname(__FILE__) . '/../json/compte.json', $newJsonString);
 	}
 	else{
 		echo 'Vous n\'avez pas assez de crédits.';

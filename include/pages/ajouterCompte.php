@@ -41,7 +41,7 @@
 		$data[$rang]['nbCredit'] = intval($_POST['credit']);
 		$data[$rang]['mail'] = $_POST['mail'];
 		$data[$rang]['login'] = $_POST['login'];
-		$data[$rang]['password'] = $_POST['mdp'];
+		$data[$rang]['password'] = md5($_POST['mdp']);
 		$data[$rang]['nom'] = $_POST['nom'];
 		$data[$rang]['prenom'] = $_POST['prenom'];
 

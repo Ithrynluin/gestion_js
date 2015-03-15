@@ -16,5 +16,6 @@
 		}
 	}
 	
-	echo json_encode($machines);
+	if(!empty($machines))
+		echo json_encode($machines);
 ?>

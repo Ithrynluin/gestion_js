@@ -11,13 +11,13 @@
 	$data = json_decode($jsonString);
 
 	foreach ($data as $key => $value) {
-		if($value->id == $_GET['id']){
+		if($value->idCompte == $_GET['id']){
 			$id = $key;
-			$pseudo = $value->id;
+			$pseudo = $value->idCompte;
 		}
 	}
-	if($pseudo == null){
-		echo 'Ce pseudo n\'existe pas';
+	if(!isset($id)){
+		echo 'Ce compte n\'existe pas';
 	}
 	else{
 		$credits = $data[$id]->nbCredit;

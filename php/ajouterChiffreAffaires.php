@@ -18,7 +18,7 @@
 		}
 	}
 
-	var_dump($chiffreAffaires);
+	//var_dump($chiffreAffaires);
 
 	// Chiffre d'affaires nul pour aujourd'hui
 	if(empty($chiffreAffaires)){
