@@ -3,7 +3,7 @@
 	// Paramètres (GET) :
 	// 		- pseudo : pseudo du joueur
 	// Type de données attendu : JSON
-	// Type de données retourné : JSON (objet joueur) si
+	// Type de données retourné : JSON (objet utilise) si
 	//		il utilise une machine, 0 sinon
 	require dirname(__FILE__).'/util.php';
 

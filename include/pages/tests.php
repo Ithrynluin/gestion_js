@@ -137,7 +137,6 @@
 
 <h3>Test récupération machines libres par zone</h3>
 <div id="div8">
-
 	<p>
 		<label>Identifiant de la zone</label>
 		<input class="idZone" type="text"/>
@@ -150,10 +149,122 @@
 	<p class="res"></p>
 </div>
 
+<hr/>
 
+<h3>Test récupération zones libres</h3>
+<div id="div9">
+	<p>
+		<input type="button" value="Envoyer" id="bouton9" />
+	</p>
 
+	<p class="res"></p>
+</div>
 
+<hr/>
 
+<h3>Test récupération chiffre affaires</h3>
+<div id="div10">
+	<p>
+		<label>Identifiant de la zone</label>
+		<input class="idZone" type="text"/>
+	</p>
+
+	<p>
+		<input type="button" value="Envoyer" id="bouton10" />
+	</p>
+
+	<p class="res"></p>
+</div>
+
+<hr/>
+
+<h3>Test si un joueur utilise une machine (avec son id)</h3>
+<div id="div11">
+	<p>
+		<label>Identifiant du joueur</label>
+		<input class="idJoueur" type="text"/>
+	</p>
+
+	<p>
+		<input type="button" value="Envoyer" id="bouton11" />
+	</p>
+
+	<p class="res"></p>
+</div>
+
+<hr/>
+
+<h3>Test si un joueur utilise une machine (avec son pseudo)</h3>
+<div id="div12">
+	<p>
+		<label>Pseudo du joueur</label>
+		<input class="pseudo" type="text"/>
+	</p>
+
+	<p>
+		<input type="button" value="Envoyer" id="bouton12" />
+	</p>
+
+	<p class="res"></p>
+</div>
+
+<hr/>
+
+<h3>Test libération machine</h3>
+<div id="div13">
+	<p>
+		<label>Identifiant de la machine</label>
+		<input class="idMachine" type="text"/>
+	</p>
+
+	<p>
+		<input type="button" value="Envoyer" id="bouton13" />
+	</p>
+
+	<p class="res"></p>
+</div>
+
+<hr/>
+
+<h3>Test mot de passe</h3>
+<div id="div14">
+	<p>
+		<label>Pseudo du joueur</label>
+		<input class="login" type="text"/>
+	</p>
+
+	<p>
+		<label>Mot de passse</label>
+		<input class="password" type="text"/>
+	</p>
+
+	<p>
+		<input type="button" value="Envoyer" id="bouton14" />
+	</p>
+
+	<p class="res"></p>
+</div>
+
+<hr/>
+
+<h3>Test mise à jour machine</h3>
+<div id="div15">
+	<p>
+		<label>Identifiant de la machine</label>
+		<input class="idMachine" type="text"/>
+	</p>
+
+	<p>
+		<label>Identifiant de l'état</label>
+		<input class="idEtat" type="text"/>
+	</p>
+
+	<p>
+		<input type="button" value="Envoyer" id="bouton15" />
+	</p>
+
+	<p class="res"></p>
+</div>
 
 
 

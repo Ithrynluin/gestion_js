@@ -26,7 +26,7 @@
 	// Récupération du mot de passe
 	if( !empty($idCompte) ){
 		foreach ($comptes as $key => $value) {
-			if($value["idCompte"] == $idCompte && $value["password"]==$_GET["password"]){
+			if($value["idCompte"] == $idCompte && $value["password"]==md5($_GET["password"])){
 				echo $idJoueur;
 			}
 		}

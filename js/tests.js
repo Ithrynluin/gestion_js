@@ -171,9 +171,154 @@ $(function(){
 			}
 		});
 	});
+	$("#bouton9").on("click", function(){
+		var objet = {
+		}
 
+		$.ajax({
+			data:objet,
+			type:'GET',
+			url:'php/get_zone_libre.php',
+			success:function(data){
+				$("#div9 .res").removeClass("label-danger");
+				$("#div9 .res").addClass("label-success");
+				$("#div9 .res").html("Réponse : "+data);
+			},
+			error:function(data){
+				$("#div9 .res").removeClass("label-success");
+				$("#div9 .res").addClass("label-danger");
+				$("#div9 .res").html("Problème de requête ajax");
+			}
+		});
+	});
+	$("#bouton10").on("click", function(){
+		var objet = {
+			idZone:$("#div10 .idZone").val(),
+		}
 
+		$.ajax({
+			data:objet,
+			type:'GET',
+			url:'php/getChiffreAffaires.php',
+			success:function(data){
+				$("#div10 .res").removeClass("label-danger");
+				$("#div10 .res").addClass("label-success");
+				$("#div10 .res").html("Réponse : "+data);
+			},
+			error:function(data){
+				$("#div10 .res").removeClass("label-success");
+				$("#div10 .res").addClass("label-danger");
+				$("#div10 .res").html("Problème de requête ajax");
+			}
+		});
+	});
+	$("#bouton11").on("click", function(){
+		var objet = {
+			idJoueur:$("#div11 .idJoueur").val(),
+		}
 
+		$.ajax({
+			data:objet,
+			type:'GET',
+			url:'php/is_utilise_joueur_by_id.php',
+			success:function(data){
+				$("#div11 .res").removeClass("label-danger");
+				$("#div11 .res").addClass("label-success");
+				$("#div11 .res").html("Réponse : "+data);
+			},
+			error:function(data){
+				$("#div11 .res").removeClass("label-success");
+				$("#div11 .res").addClass("label-danger");
+				$("#div11 .res").html("Problème de requête ajax");
+			}
+		});
+	});
+	$("#bouton12").on("click", function(){
+		var objet = {
+			pseudo:$("#div12 .pseudo").val(),
+		}
+
+		$.ajax({
+			data:objet,
+			type:'GET',
+			url:'php/is_utilise_joueur_by_pseudo.php',
+			success:function(data){
+				$("#div12 .res").removeClass("label-danger");
+				$("#div12 .res").addClass("label-success");
+				$("#div12 .res").html("Réponse : "+data);
+			},
+			error:function(data){
+				$("#div12 .res").removeClass("label-success");
+				$("#div12 .res").addClass("label-danger");
+				$("#div12 .res").html("Problème de requête ajax");
+			}
+		});
+	});
+	$("#bouton13").on("click", function(){
+		var objet = {
+			idMachine:$("#div13 .idMachine").val(),
+		}
+
+		$.ajax({
+			data:objet,
+			type:'GET',
+			url:'php/liberer_machine_by_id.php',
+			success:function(data){
+				$("#div13 .res").removeClass("label-danger");
+				$("#div13 .res").addClass("label-success");
+				$("#div13 .res").html("Réponse : "+data);
+			},
+			error:function(data){
+				$("#div13 .res").removeClass("label-success");
+				$("#div13 .res").addClass("label-danger");
+				$("#div13 .res").html("Problème de requête ajax");
+			}
+		});
+	});
+	$("#bouton14").on("click", function(){
+		var objet = {
+			login:$("#div14 .login").val(),
+			password:$("#div14 .password").val()
+		}
+
+		$.ajax({
+			data:objet,
+			type:'GET',
+			url:'php/checkPassword.php',
+			success:function(data){
+				$("#div14 .res").removeClass("label-danger");
+				$("#div14 .res").addClass("label-success");
+				$("#div14 .res").html("Réponse : "+data);
+			},
+			error:function(data){
+				$("#div14 .res").removeClass("label-success");
+				$("#div14 .res").addClass("label-danger");
+				$("#div14 .res").html("Problème de requête ajax");
+			}
+		});
+	});
+	$("#bouton15").on("click", function(){
+		var objet = {
+			idMachine:$("#div15 .idMachine").val(),
+			idEtat:$("#div15 .idEtat").val()
+		}
+
+		$.ajax({
+			data:JSON.stringify(objet),
+			type:'POST',
+			url:'php/updateMachine.php',
+			success:function(data){
+				$("#div15 .res").removeClass("label-danger");
+				$("#div15 .res").addClass("label-success");
+				$("#div15 .res").html("Réponse : "+data);
+			},
+			error:function(data){
+				$("#div15 .res").removeClass("label-success");
+				$("#div15 .res").addClass("label-danger");
+				$("#div15 .res").html("Problème de requête ajax");
+			}
+		});
+	});
 
 
 

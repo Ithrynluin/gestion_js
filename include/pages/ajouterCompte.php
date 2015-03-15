@@ -35,23 +35,40 @@
 		$jsonString = file_get_contents('./json/compte.json');
 		$data = json_decode($jsonString);
 
-		$rang = sizeof($data);
-		$data[$rang] = [];
-		$data[$rang]['idCompte'] = $rang+1;
-		$data[$rang]['nbCredit'] = intval($_POST['credit']);
-		$data[$rang]['mail'] = $_POST['mail'];
-		$data[$rang]['login'] = $_POST['login'];
-		$data[$rang]['password'] = md5($_POST['mdp']);
-		$data[$rang]['nom'] = $_POST['nom'];
-		$data[$rang]['prenom'] = $_POST['prenom'];
 
-		$newJsonString = json_encode($data);
-		file_put_contents('./json/compte.json', $newJsonString);
+		foreach ($data as $key => $value) {
+			if($value->login==$_POST['login']){
+				$echec = True;
+			}
+		}
 
-		echo 'Le compte de ';
-		echo $_POST['prenom'];
-		echo ' ';
-		echo $_POST['nom'];
-		echo ' a bien été ajouté.';
+		if(isset($echec)){
+?>
+		<p class="text-danger">Echec de la création, le login est déjà utilisé.</p>
+<?php
+		} else{
+			$rang = sizeof($data);
+			$data[$rang] = [];
+			$data[$rang]['idCompte'] = $rang+1;
+			$data[$rang]['nbCredit'] = intval($_POST['credit']);
+			$data[$rang]['mail'] = $_POST['mail'];
+			$data[$rang]['login'] = $_POST['login'];
+			$data[$rang]['password'] = md5($_POST['mdp']);
+			$data[$rang]['nom'] = $_POST['nom'];
+			$data[$rang]['prenom'] = $_POST['prenom'];
+
+			$newJsonString = json_encode($data);
+			file_put_contents('./json/compte.json', $newJsonString);
+
+			echo '<p class="text-success">Le compte de ';
+			echo $_POST['prenom'];
+			echo ' ';
+			echo $_POST['nom'];
+			echo ' a bien été ajouté.</p>';
+			
+		}
+?>
+		<a href="index.php?page=4">Retour</a>
+<?php
 	}
 	?>

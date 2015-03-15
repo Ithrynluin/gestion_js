@@ -27,8 +27,11 @@ switch ($page) {
 	case 7:
 		include_once('pages/liberer_machine.php');
 		break;
-	case 8:
+	case 42:
 		include_once('pages/tests.php');
+		break;
+	case 9:
+		include_once('pages/ajouterPseudo.php');
 		break;
 	default : 	include_once('pages/accueil.inc.php');
 }

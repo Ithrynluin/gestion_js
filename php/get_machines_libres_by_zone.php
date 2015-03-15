@@ -3,7 +3,8 @@
 	// Paramètres (GET) :
 	// 		- idZone : identifiant de la zone en question
 	// Type de données attendu : JSON
-	// Type de données retourné : JSON (tableau d'objets machine)
+	// Type de données retourné : JSON (tableau d'objets machine) ou
+	// rien s'il n'y a pas de machines ou si la zone n'existe pas
 	$json = file_get_contents(dirname(__FILE__) . '/../json/machine.json');
 	$input_arrays = json_decode($json, true);
 
