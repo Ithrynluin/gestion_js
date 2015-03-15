@@ -1,4 +1,9 @@
 <?php
+	// Permet de libérer une machine
+	// Paramètres (GET) :
+	// 		- idMachine : identifiant de la machine
+	// Type de données attendu : JSON
+	// Type de données retourné : 
 	require_once(dirname(__FILE__).'/util.php');
 	$joueur = get_id_joueur_by_id_machine($_GET['idMachine']);
 

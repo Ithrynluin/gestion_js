@@ -1,4 +1,9 @@
 <?php
+	// Permet de récupérer les zones qui possèdent au moins
+	// une machine libre
+	// Paramètres : Aucun
+	// Type de données attendu : JSON
+	// Type de données retourné : JSON (tableau d'objets zone)
 	$json = file_get_contents(dirname(__FILE__) . '/../json/machine.json');
 	$machine_array = json_decode($json, true);
 
