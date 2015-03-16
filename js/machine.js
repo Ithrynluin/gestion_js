@@ -10,7 +10,7 @@ $(document).ready(function() {
 				//console.log(data);
 				if(id != 0){
 					node = document.createElement("p");           
-					node.innerHTML = 'chiffre d\'affaire : '+data+' euros';
+					node.innerHTML = 'Chiffre d\'affaires : '+data+'€';
 					$("#salle").append(node);
 				}
 			},
@@ -44,6 +44,7 @@ $(document).ready(function() {
 			var node;
 			var numtable = 0;
 			cmpt=5;
+			// Création des éléments représentant les machines
 			for (machine in machines){
 				if (cmpt % 5 == 0) {
 					node = document.createElement("div"); 
@@ -61,51 +62,56 @@ $(document).ready(function() {
 						$(".table:last-child").append("<span class='machineLibre'>"+machines[machine]["idMachine"]+"</span>");
 				cmpt++;
 			}
-			$('.machineLibre').click(function(){
-				this.className = 'machineHs';
-				var res = {};
-				res.idMachine = $(this).html();
-				res.idEtat = 3 ;
-				console.log(res);
 
+			function sendUpdate(machine){
 				$.ajax({
-					data:JSON.stringify(res),
+					data:JSON.stringify(machine),
 					type:'POST',
 					url:'php/updateMachine.php',
 					success:function(data){
-						// Affichage si tout se passe bien
-						console.log("Update ok");
+						//console.log("Update ok");
 					},
 					error:function(data){
-						console.log("Erreur update");
+						//console.log("Erreur update");
 					}
 				});
-			});
-			$('.machineHs').click(function(){
-				this.className = 'machineLibre';
-				var res = {};
-				res.idMachine = $(this).html();
-				res.idEtat = 1 ;
-				console.log(res);
 
-				$.ajax({
-					data:JSON.stringify(res),
-					type:'POST',
-					url:'php/updateMachine.php',
-					success:function(data){
-						// Affichage si tout se passe bien
-						console.log("Update ok");
-					},
-					error:function(data){
-						console.log("Erreur update");
-					}
+				ajouterEvenementsClicMachines();
+			}
+			
+			function ajouterEvenementsClicMachines(){
+				// Clic sur une machine libre : mise hors service
+				$('.machineLibre').click(function(){
+					this.className = 'machineHs';
+					var res = {};
+					res.idMachine = $(this).html();
+					res.idEtat = 3 ;
+
+					sendUpdate(res);
 				});
-			});
-				chiffreA(zone);
+
+				// Clic sur une machine hors service : mise en service
+				$('.machineHs').click(function(){
+					this.className = 'machineLibre';
+					var res = {};
+					res.idMachine = $(this).html();
+					res.idEtat = 1 ;
+
+					sendUpdate(res);
+				});
+			};
+
+			ajouterEvenementsClicMachines();
+
+			// Affichage du chiffre d'affaires
+			chiffreA(zone);
 		});
 	}
 
-	$("#liste").on("change", update());
+	$("#liste").on("change", function(){
+		update();
+		$("#optionInutile").remove();
+	});
 
 	function boucle(){
 		update();

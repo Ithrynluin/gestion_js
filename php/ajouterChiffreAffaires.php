@@ -1,6 +1,6 @@
 <?php
 	// Ajoute un certain montant au chiffre d'affaires d'aujourd'hui
-	// d'une certaine zone
+	// dans une certaine zone
 	// Paramètres (GET) :
 	// 		- idZone : identifiant de la zone
 	//		- montant : le montant à ajouter au chiffre d'affaires
@@ -18,7 +18,7 @@
 		}
 	}
 
-	var_dump($chiffreAffaires);
+	//var_dump($chiffreAffaires);
 
 	// Chiffre d'affaires nul pour aujourd'hui
 	if(empty($chiffreAffaires)){

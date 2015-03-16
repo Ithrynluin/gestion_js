@@ -9,9 +9,18 @@ if(empty($_POST["pseudo"]) || empty($_POST["zone"]) || empty($_POST['machine']))
 	<form method="post" action="index.php?page=3">
 		<p>
 			<label for="pseudo">Pseudo : </label>
-			<input type="text" id="pseudo" name="pseudo"/>
+			<div class="input-group"> 
+				<input type="text" id="pseudo" name="pseudo"/>
+				<span class="input-group-btn">
+					<a href="index.php?page=9">
+						<button class="btn" type="button">
+							Nouveau
+						</button>
+					</a>
+				</span>
+			</div>
 		</p>
-		<p id="credits"> Credits : <span></span></p>
+		<p id="credits" class="text-info"> Crédits : <span></span></p>
 		<p>
 			<label for="zone">Zone : </label>
 			<select id="zone" name="zone">
@@ -30,18 +39,17 @@ if(empty($_POST["pseudo"]) || empty($_POST["zone"]) || empty($_POST['machine']))
 <?php
 	if($_POST['machine'] != "-1"){ 
 		$rt = set_joueur_by_pseudo_utilise_machine($_POST['pseudo'], $_POST['machine']);
-		echo $rt;
 		if($rt == 1){
 			set_machine_occupe($_POST['machine']); ?>
-			<p>
-				Opération réussie : La machine <?php echo $_POST['machine']?> est attibué au joueur <?php echo $_POST['pseudo']?>
+			<p class="text-success">
+				Opération réussie : La machine <?php echo $_POST['machine']?> est attribuée au joueur <?php echo $_POST['pseudo']?>
 			</p>
 <?php
 		}else{ ?>
-			<p>Erreur une machine n'a pas pu etre attribué.</p>
+			<p class="text-danger">Erreur une machine n'a pas pu etre attribuée.</p>
 <?php   }
 	}else{ ?>
-		<p>Erreur une machine n'a pas pu etre attribué.</p>
+		<p class="text-danger">Erreur une machine n'a pas pu etre attribuée.</p>
 <?php
 	}?>
 	<p>
