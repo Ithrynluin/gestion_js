@@ -1,5 +1,6 @@
 <h1>Machines</h1>
-<h2>Gérer les machines (ici pour libéré une machine : <a href="index.php?page=7">Libérer une machine</a>)</h2>
+<h2>Gérer les machines </h2> 
+<p>(ici pour libérer une machine : <a href="index.php?page=7">Libérer une machine</a>)</p>
 <link href='css/machine.css' rel='stylesheet' />
 <select id='liste'>
 	<option id='optionInutile' value='0'>Zone</option>
