@@ -1,5 +1,6 @@
 $(document).ready(function() {
-	$("#liste").on("change",function(){
+	
+	function update(){
 		var zone = $("select#liste").val();
 		$( "span" ).remove();
 		$(".table").remove();
@@ -72,5 +73,18 @@ $(document).ready(function() {
 				});
 			});
 		});
+	}
+
+	$("#liste").on("change", function(){
+		update();
+		$("#optionInutile").remove();
 	});
+
+	function boucle(){
+		update();
+		setTimeout(boucle,5000);
+	}
+
+	boucle();
+
 });
