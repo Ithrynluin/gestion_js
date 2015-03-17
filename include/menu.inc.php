@@ -15,20 +15,29 @@
 				<li>
 					<a href="index.php?page=0">Accueil</a>
 				</li>
-				<li>
-					<a href="index.php?page=1">Machines</a>
+				<li class="dropdown">
+					<a href="#" data-toggle="dropdown" class="dropdown-toggle">Machines<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+			          <li ><a href="index.php?page=1">Gérer les machines</a></li>
+			          <li ><a href="index.php?page=7">Libérer une machine</a></li>
+			        </ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" data-toggle="dropdown" class="dropdown-toggle">WordPress<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+			          <li><a href="creation.php">Nouvelle convocation</a></li>
+			          <li><a href="creations">Liste des documents</a></li>
+			        </ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" data-toggle="dropdown" class="dropdown-toggle">Joueurs<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+			          <li ><a href="index.php?page=3">Nouveau joueur</a></li>
+			          <li ><a href="index.php?page=4">Nouveau Compte</a></li>
+			        </ul>
 				</li>
 				<li>
 					<a href="index.php?page=2">Evénements</a>
-				</li>
-				<li>
-					<a href="index.php?page=3">Nouveau joueur</a>
-				</li>
-				<li>
-					<a href="index.php?page=7">Libérer une machine</a>
-				</li>
-				<li>
-					<a href="index.php?page=4">Nouveau Compte</a>
 				</li>
 			</ul>
 		</div>
