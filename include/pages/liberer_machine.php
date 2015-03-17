@@ -15,3 +15,9 @@
 <div id='salle'>
 
 </div>
+<div id="byPseudo">
+	<label for="pseudo">Pseudo : </label>
+	<input type="text" id="pseudo" name="pseudo" />
+	<button class="btn" type="button" id="valider"/>Valider</button>
+	<p id="result"></p>
+</div>
