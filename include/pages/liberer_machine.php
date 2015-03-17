@@ -8,9 +8,9 @@
 </select>
 <br>
 <ul>
-	<li style='border: black solid 1px; width: 20px; height: 20px; margin-left: 50px; display: inline-block; background-color: red; border-radius: 100px;'> </li> Machines HS
-	<li style='border: black solid 1px;	width: 20px; height: 20px; margin-left: 50px; display: inline-block; background-color: green; border-radius: 100px;'> </li> Machines Libres
-	<li style='border: black solid 1px;	width: 20px; height: 20px; margin-left: 50px; display: inline-block; border-radius: 100px;'> </li> Machines Occupées
+	<li id='legendeMachineHs'> </li> Machines HS
+	<li id='legendeMachineLibre'> </li> Machines Libres
+	<li id='legendeMachineOccupee'> </li> Machines Occupées
 </ul>
 <div id='salle'>
 
