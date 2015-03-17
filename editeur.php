@@ -1,20 +1,16 @@
-<?php session_start(); ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php
+
+require_once("include/autoload.inc.php");
+require_once("include/header.inc.php"); 
+ 
+?>
         <link rel="import" href="editable.html">
-        <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="all" />
-        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all" />
-        <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    	<script src="js/jquery-1.4.2.min.js"></script>
-    	<script src="js/bootstrap.min.js"></script>
-    	<script type="text/javascript" src="js/bootstrap-filestyle.js"></script>
         <script src="js/edit.js" type="text/javascript" charset="utf-8"></script>
-    </head>
-	<body onload="InitEditable()">
-<div style="margin:50px;">
+	<body onload="InitEditable()" class="well">
+<?php
+    require_once("include/menu.inc.php"); 
+?>
+	<div style="margin:50px;">
 			<div class="btn-group" role="group" aria-label="1">
 			  	<button type="button" class="btn btn-default" onclick="formatDoc('bold');modifPage();"><span class="fa fa-fw fa-bold"></span></button>
 			 	<button type="button" class="btn btn-default" onclick="formatDoc('italic');modifPage();"><span class="fa fa-fw fa-italic"></span></button>

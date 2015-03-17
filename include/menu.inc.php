@@ -25,7 +25,8 @@
 				<li class="dropdown">
 					<a href="#" data-toggle="dropdown" class="dropdown-toggle">WordPress<b class="caret"></b></a>
 					<ul class="dropdown-menu">
-			          <li ><a href="creation.php">Nouveau document</a></li>
+			          <li><a href="creation.php">Nouvelle convocation</a></li>
+			          <li><a href="creations">Liste des documents</a></li>
 			        </ul>
 				</li>
 				<li class="dropdown">
