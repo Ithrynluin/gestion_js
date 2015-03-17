@@ -15,8 +15,16 @@ $(document).ready(function() {
 		.done(function(data) {
 			console.log(data);
 			if(data.length != 0){
-				$("#machine").text(data[0]["idMachine"]);
-				$("#machine").val(data[0]["idMachine"]);
+				var utilmachine = data[0]["nbUtilisation"];
+				var idMachine = data[0]["idMachine"];
+				for (j in data){
+					if (utilmachine > data[j]["nbUtilisation"]) {
+						idMachine = data[j]["idMachine"];
+						utilmachine = data[j]["nbUtilisation"];					
+					}
+				}
+				$("#machine").text(idMachine);
+				$("#machine").val(idMachine);
 			}else{
 				$("#machine").text("Aucune machine disponible");
 				$("#machine").val("-1");
@@ -46,8 +54,16 @@ $(document).ready(function() {
 					})
 					.done(function(data) {
 						if(data.length != 0){
-							$("#machine").text(data[0]["idMachine"]);
-							$("#machine").val(data[0]["idMachine"])
+							var utilmachine = data[0]["nbUtilisation"];
+							var idMachine = data[0]["idMachine"];
+							for (j in data){
+								if (utilmachine > data[j]["nbUtilisation"]) {
+									idMachine = data[j]["idMachine"];
+									utilmachine = data[j]["nbUtilisation"];					
+								}
+							}
+							$("#machine").text(idMachine);
+							$("#machine").val(idMachine);
 						}else{
 							$("#machine").text("Aucune machine disponible");
 							$("#machine").val("-1");

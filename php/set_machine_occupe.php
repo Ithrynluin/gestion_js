@@ -7,6 +7,7 @@ function set_machine_occupe($idMacine){
 		if($value["idMachine"] == $idMacine){
 			if($value["idEtat"] == 1){
 				$machines[$key]["idEtat"] = 2;
+				$machines[$key]["nbUtilisation"] += 1;
 			}
 		}
 	}
