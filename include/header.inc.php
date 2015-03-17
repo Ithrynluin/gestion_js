@@ -9,13 +9,18 @@
 		<link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
 		<link href='css/bootstrap.min.css' rel='stylesheet'/>
 		<link href='css/style.css' rel='stylesheet'/>
+		<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="all" />
+        <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
 
 		<script src='js/jquery.min.js'></script>
+		<script src='js/jquery-ui.min.js'></script>
 		<script src='js/moment.min.js'></script>
 		<script src='js/fullcalendar.min.js'></script>
 		<script src='js/fullcalendar.fr.js'></script>
+    	<script type="text/javascript" src="js/bootstrap-filestyle.js"></script>
 
 		<title>Gérance - Client riche</title>
 	</head>
 
-	<body class="well">
+

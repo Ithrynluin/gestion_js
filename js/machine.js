@@ -23,7 +23,7 @@ $(document).ready(function() {
 	function update(){
 		var zone = $("select#liste").val();
 		$("#salle p").remove();
-		$( "span" ).remove();
+		//$( "#salle span" ).remove();
 		$(".table").remove();
 		$.ajax({
 			url: 'json/machine.json',
