@@ -2,7 +2,7 @@
 <link href='css/machine.css' rel='stylesheet' />
 <script type="text/javascript" src='js/liberer_machine.js'></script>
 <select id='liste'>
-	<option value='0'>Zone</option>
+	<option id='optionInutile' value='0'>Zone</option>
 	<option value='1'>Gamers</option>
 	<option value='2'>Mélomanes</option>
 </select>
