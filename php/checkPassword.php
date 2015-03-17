@@ -5,7 +5,7 @@
 	//		- password : son mot de passe
 	// Type de données attendu : JSON
 	// Type de données retourné : 
-	//		- l'identifiant du joueur si le mot de passe est bon
+	//		- un objet joueur si le mot de passe est bon
 	//		- Rien si un problème est rencontré
 
 
@@ -20,6 +20,7 @@
 		if($value["pseudo"] == $_GET["login"]){
 			$idCompte = $value["idCompte"];
 			$idJoueur = $value["idJoueur"];
+			$joueur = $value;
 		}
 	}
 
@@ -27,7 +28,7 @@
 	if( !empty($idCompte) ){
 		foreach ($comptes as $key => $value) {
 			if($value["idCompte"] == $idCompte && $value["password"]==md5($_GET["password"])){
-				echo $idJoueur;
+				echo $joueur;
 			}
 		}
 	}
