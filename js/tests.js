@@ -319,7 +319,46 @@ $(function(){
 			}
 		});
 	});
+	$("#bouton16").on("click", function(){
+		var objet = {
+		}
 
+		$.ajax({
+			data:JSON.stringify(objet),
+			type:'POST',
+			url:'php/getAllJoueurs.php',
+			success:function(data){
+				$("#div16 .res").removeClass("label-danger");
+				$("#div16 .res").addClass("label-success");
+				$("#div16 .res").html("Réponse : "+data);
+			},
+			error:function(data){
+				$("#div16 .res").removeClass("label-success");
+				$("#div16 .res").addClass("label-danger");
+				$("#div16 .res").html("Problème de requête ajax");
+			}
+		});
+	});
+	$("#bouton17").on("click", function(){
+		var objet = {
+		}
+
+		$.ajax({
+			data:JSON.stringify(objet),
+			type:'POST',
+			url:'php/getAllComptes.php',
+			success:function(data){
+				$("#div17 .res").removeClass("label-danger");
+				$("#div17 .res").addClass("label-success");
+				$("#div17 .res").html("Réponse : "+data);
+			},
+			error:function(data){
+				$("#div17 .res").removeClass("label-success");
+				$("#div17 .res").addClass("label-danger");
+				$("#div17 .res").html("Problème de requête ajax");
+			}
+		});
+	});
 
 
 

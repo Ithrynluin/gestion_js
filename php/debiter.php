@@ -30,6 +30,6 @@
 		file_put_contents(dirname(__FILE__) . '/../json/compte.json', $newJsonString);
 	}
 	else{
-		echo 'Vous n\'avez pas assez de crédits.';
+		echo "Il n'y a pas assez de crédits sur ce compte.";
 	}
 ?>

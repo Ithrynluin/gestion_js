@@ -32,8 +32,11 @@
 				<li class="dropdown">
 					<a href="#" data-toggle="dropdown" class="dropdown-toggle">Joueurs<b class="caret"></b></a>
 					<ul class="dropdown-menu">
-			          <li ><a href="index.php?page=3">Nouveau joueur</a></li>
-			          <li ><a href="index.php?page=4">Nouveau Compte</a></li>
+					  <li><a href="index.php?page=8">Lister les joueurs</a></li>
+			          <li><a href="index.php?page=3">Nouveau joueur</a></li>
+			          <li><a href="index.php?page=4">Nouveau Compte</a></li>
+			          <li><a href="index.php?page=10">Créditer un compte</a></li>
+			          <li><a href="index.php?page=11">Débiter un compte</a></li>
 			        </ul>
 				</li>
 				<li>
