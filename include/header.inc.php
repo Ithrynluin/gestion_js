@@ -13,11 +13,12 @@
         <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 
-    	<script type="text/javascript" src="js/bootstrap-filestyle.js"></script>
 		<script src='js/jquery.min.js'></script>
+		<script src='js/jquery-ui.min.js'></script>
 		<script src='js/moment.min.js'></script>
 		<script src='js/fullcalendar.min.js'></script>
 		<script src='js/fullcalendar.fr.js'></script>
+    	<script type="text/javascript" src="js/bootstrap-filestyle.js"></script>
 
 		<title>Gérance - Client riche</title>
 	</head>

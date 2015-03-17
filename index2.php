@@ -13,5 +13,5 @@ require_once("include/header.inc.php");
 ?>
 		<button onclick="sendPageName();">Modifier</button>
 		<button onclick="document.location='creation.php';">Créer</button>
-</body>
-</html>
+<?php
+require_once("include/footer.inc.php"); ?>

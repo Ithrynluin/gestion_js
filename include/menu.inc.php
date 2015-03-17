@@ -18,7 +18,7 @@
 				<li class="dropdown">
 					<a href="#" data-toggle="dropdown" class="dropdown-toggle">Machines<b class="caret"></b></a>
 					<ul class="dropdown-menu">
-			          <li ><a href="index.php?page=1">Machines</a></li>
+			          <li ><a href="index.php?page=1">Gérer les machines</a></li>
 			          <li ><a href="index.php?page=7">Libérer une machine</a></li>
 			        </ul>
 				</li>

@@ -4,8 +4,8 @@ require_once("include/autoload.inc.php");
 require_once("include/header.inc.php"); 
  
 ?>
-        <link rel="import" href="editable.html">
-        <script src="js/edit.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="import" href="editable.html">
+    <script src="js/edit.js" type="text/javascript" charset="utf-8"></script>
 	<body onload="InitEditable()" class="well">
 <?php
     require_once("include/menu.inc.php"); 
@@ -150,6 +150,6 @@ require_once("include/header.inc.php");
 ?> 
 		<div class="btn-group" role="group" aria-label="5">
 			<button style="margin-left:200px;" type="button" class="btn btn-success" onclick="modifPage();"><span class="fa fa-fw fa-send"></span> Envoyer</button>
-		</div>>
-	</body>
-</html>
+		</div>
+<?php
+require_once("include/footer.inc.php"); ?>

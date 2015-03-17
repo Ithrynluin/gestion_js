@@ -83,7 +83,9 @@ require_once("include/header.inc.php");
 			</div>
 			
 			<!-- Iframe permet la saisie et l'interprétation du HTML  -->
-			<iframe id="editor" src="template.php" style="width: 80%;height: 200%;"> </iframe>
+			<iframe id="editor" src="template.php" style="width: 95%;height:200%;"> </iframe>
+			
+
 			<form class="form-horizontal" action="#" method="post" enctype="multipart/form-data">
 	    		<div  class="col-xs-4">
 	    			<input type="file" name="fileToUpload" id="fileToUpload" class="filestyle">
@@ -94,7 +96,7 @@ require_once("include/header.inc.php");
 						</button>
 					</div>
 				</div>
- 			</form>
+			</form>
 <?php
  	if(isset($_FILES["fileToUpload"])){
 		$target_dir = "upload/";
@@ -141,11 +143,13 @@ require_once("include/header.inc.php");
 		}?>
 <?php	}
 ?>
+	<div>
 		<label for="nomPage">Nom de la page : </label>
 		<input name="nomPage" id="nom" type="text" placeholder="coucou" required />
+	</div>
 		<div class="btn-group" role="group" aria-label="5">
 			<button style="margin-left:200px;" type="button" class="btn btn-success" onclick="creerPage();"><span class="fa fa-fw fa-send"></span> Envoyer</button>
 		</div>
 		</form>
-	</body>
-</html>
+<?php
+require_once("include/footer.inc.php"); ?>
