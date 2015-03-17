@@ -47,30 +47,7 @@ $(document).ready(function() {
 				res.idMachine = $(this).html();
 				res.idEtat = 1;
 				console.log(res);
-				$.ajax({
-					url: 'php/liberer_machine_by_id.php',
-					type: 'GET',
-					cache: false,
-					async: true,
-					data: "idMachine="+res.idMachine,
-					dataType: 'json'
-				}).done(function(data){
-					console.log(data);
-				}).fail(function(data){
-					console.log(data);
-				});
-				$.ajax({
-					data:JSON.stringify(res),
-					type:'POST',
-					url:'php/updateMachine.php',
-					success:function(data){
-						// Affichage si tout se passe bien
-						console.log("Update ok");
-					},
-					error:function(data){
-						console.log("Erreur update");
-					}
-				});
+				liberer_machine(res);
 			});
 		});
 	}
@@ -80,11 +57,77 @@ $(document).ready(function() {
 		$("#optionInutile").remove();
 	});
 
+	$('#valider').on("click", function(){
+		var pseudo = $("#pseudo").val();
+		if(pseudo != ""){
+			$.ajax({
+				url: 'php/get_joueur_by_pseudo.php',
+				type: 'GET',
+				dataType: 'json',
+				data: "pseudo="+pseudo,
+			})
+			.done(function(data) {
+				$.ajax({
+					url: 'php/get_id_machine_by_id_joueur.php',
+					type: 'GET',
+					dataType: 'json',
+					data: 'idJoueur='+data['idJoueur'],
+				})
+				.done(function(data) {
+					if(data != 0){
+						liberer_machine(data);
+						$('#result').text("La machine " + data.idMachine + " a été libérée.");
+						$('#result').toggleClass("text-success");
+					}else{
+						$('#result').text("Aucune machine associé au pseudo");
+						$('#result').toggleClass("text-danger");
+					}
+				})
+				.fail(function() {
+					$('#result').text("Pseudo incorect");
+					$('#result').toggleClass("text-danger");
+				});
+				
+			})
+			.fail(function() {
+				console.log("error");
+			});
+			
+		}
+	});
+
 	function boucle(){
 		update();
 		setTimeout(boucle,5000);
 	}
 
 	boucle();
-
+	
 });
+
+function liberer_machine(machine){
+	$.ajax({
+		url: 'php/liberer_machine_by_id.php',
+		type: 'GET',
+		cache: false,
+		async: true,
+		data: "idMachine="+machine.idMachine,
+		dataType: 'json'
+	}).done(function(data){
+		console.log(data);
+	}).fail(function(data){
+		console.log(data);
+	});
+	$.ajax({
+		data:JSON.stringify(machine),
+		type:'POST',
+		url:'php/updateMachine.php',
+		success:function(data){
+			// Affichage si tout se passe bien
+			console.log("Update ok");
+		},
+		error:function(data){
+			console.log("Erreur update");
+		}
+	});
+}

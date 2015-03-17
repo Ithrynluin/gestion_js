@@ -17,7 +17,11 @@
 </div>
 <div id="byPseudo">
 	<label for="pseudo">Pseudo : </label>
-	<input type="text" id="pseudo" name="pseudo" />
-	<button class="btn" type="button" id="valider"/>Valider</button>
+	<div class="input-group"> 
+	<input type="text" id="pseudo" name="pseudo" class="form-control"/>
+	<div class="input-group-btn">
+		<button class="btn" type="button" id="valider"/>Valider</button>
+	</div>
+</div>
 	<p id="result"></p>
 </div>
