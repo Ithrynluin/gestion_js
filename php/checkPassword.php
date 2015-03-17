@@ -28,7 +28,7 @@
 	if( !empty($idCompte) ){
 		foreach ($comptes as $key => $value) {
 			if($value["idCompte"] == $idCompte && $value["password"]==md5($_GET["password"])){
-				echo $joueur;
+				echo json_encode($joueur);
 			}
 		}
 	}
