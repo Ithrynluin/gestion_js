@@ -2,19 +2,27 @@ $(document).ready(function() {
 
 	$("#valider").attr({"disabled":"disabled"});
 	$("#login").on("change", function(){
-		var login = this.value;
+		var login = $("#login").val().trim();
 		$.ajax({
 			url: 'php/get_compte_by_login.php',
 			type: 'GET',
-			dataType: 'json',
-			data: "login="+login,
+			data: {login:login},
 			success:function(data) {
-				if(data.length != 0){
-				$("#logPris").text("Le login est déjà pris.");
+				if(data.trim)
+					data = data.trim()
+
+				if(data){
+					$("#logPris").html("Le login est déjà pris.");
+					$("#valider").attr("disabled", "disabled");
 				}
 				else{
 					$("#valider").removeAttr("disabled");
+					$("#logPris").html("");
 				}
+			},
+			error:function(a, b, c){
+				console.log("Erreur "+a+" "+b+" "+c);
+				console.log(a);
 			}
 		});	
 	});
