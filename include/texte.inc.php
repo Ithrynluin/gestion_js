@@ -30,6 +30,9 @@ switch ($page) {
 	case 8:
 		include_once('pages/listeJoueurs.php');
 		break;
+	case 12:
+		include_once('pages/listeComptes.php');
+		break;
 	case 9:
 		include_once('pages/ajouterPseudo.php');
 		break;
