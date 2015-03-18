@@ -266,7 +266,27 @@
 	<p class="res"></p>
 </div>
 
+<hr/>
 
+<h3>Test liste joueurs</h3>
+<div id="div16">
+	<p>
+		<input type="button" value="Envoyer" id="bouton16" />
+	</p>
+
+	<p class="res"></p>
+</div>
+
+<hr/>
+
+<h3>Test liste comptes</h3>
+<div id="div17">
+	<p>
+		<input type="button" value="Envoyer" id="bouton17" />
+	</p>
+
+	<p class="res"></p>
+</div>
 
 
 
